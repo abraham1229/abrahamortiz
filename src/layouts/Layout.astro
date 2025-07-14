@@ -4,7 +4,7 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en" class="w-full h-full flex flex-col">
+<html lang="en" class="w-full h-full flex flex-col text-secondary">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,7 +16,9 @@ import "../styles/global.css";
     class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-950
       bg-[radial-gradient(circle_farthest-side,rgba(56,189,248,0.15),rgba(255,255,255,0))]"
   >
-    <Header />
-    <slot />
+    <div class="flex flex-col m-auto max-w-4xl">
+      <Header />
+      <slot />
+    </div>
   </body>
 </html>
