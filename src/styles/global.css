@@ -18,11 +18,11 @@
   }
 
   h1 {
-    @apply text-5xl font-semibold tracking-tight;
+    @apply text-5xl tracking-tight;
   }
 
   h2 {
-    @apply text-2xl font-semibold mt-6;
+    @apply text-4xl font-semibold mt-6;
   }
 
   p {

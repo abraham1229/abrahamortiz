@@ -1,10 +1,33 @@
 ---
-import ExperienceIcon from "./icons/ExperienceIcon.astro"
+import ExperienceIcon from "./icons/ExperienceIcon.astro";
 ---
 
-<section class="mt-10">
-  <div class="flex items-center">
-    <ExperienceIcon/>
-    <h1 class="ml-2">Relevant Experience</h1>
+<section class="my-12">
+  <h2 class="font-title font-bold text-white flex items-center gap-2 mb-8">
+    <ExperienceIcon />
+    Relevant Experience
+  </h2>
+
+  <div class="border-l-2 border-blue-500/20 pl-6 space-y-12 ml-5">
+    <!-- ITEM 1 -->
+    <div class="flex gap-6 relative">
+      <!-- Punto -->
+      <div class="absolute -left-[31px] top-1.5 w-3 h-3 bg-accent rounded-full">
+      </div>
+
+      <!-- Info izquierda -->
+      <div class="w-1/2">
+        <h3 class="text-accent font-title font-semibold text-2xl">
+          Diseño y desarrollo web
+        </h3>
+        <h4 class="font-bold text-xl">Freelance</h4>
+        <p class="text-sm text-secondary">Actualmente…</p>
+      </div>
+
+      <!-- Descripción derecha -->
+      <div class="w-1/2 text-white text-lg leading-relaxed">
+        Me especializo en la creación de páginas web funcionales...
+      </div>
+    </div>
   </div>
 </section>
