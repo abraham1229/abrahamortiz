@@ -1,0 +1,58 @@
+---
+import IconStack from "./icons/IconStack.astro";
+import IndividualStack from "./ui/IndividualStack.astro";
+import IconAstro from "./icons/Stack/frontend/IconAstro.astro";
+import IconCss from "./icons/Stack/frontend/IconCss.astro";
+import IconFigma from "./icons/Stack/frontend/IconFigma.astro";
+import IconHthml from "./icons/Stack/frontend/IconHthml.astro";
+import IconJavaScript from "./icons/Stack/frontend/IconJavaScript.astro";
+import IconNextJs from "./icons/Stack/frontend/IconNextJs.astro";
+import IconReact from "./icons/Stack/frontend/IconReact.astro";
+import IconTaiwind from "./icons/Stack/frontend/IconTaiwind.astro";
+import IconTypeScript from "./icons/Stack/frontend/IconTypeScript.astro";
+
+const techStack = [
+  {
+    category: "Frontend",
+    items: [
+      { name: "Astro", icon: IconAstro },
+      { name: "CSS", icon: IconCss },
+      { name: "Figma", icon: IconFigma },
+      { name: "HTML", icon: IconHthml },
+      { name: "JavaScript", icon: IconJavaScript },
+      { name: "Next.js", icon: IconNextJs },
+      { name: "React", icon: IconReact },
+      { name: "Tailwind", icon: IconTaiwind },
+      { name: "TypeScript", icon: IconTypeScript },
+    ],
+  },
+  {
+    category: "Frontend",
+    items: [
+      { name: "Astro", icon: IconAstro },
+      { name: "CSS", icon: IconCss },
+      { name: "Figma", icon: IconFigma },
+      { name: "HTML", icon: IconHthml },
+      { name: "JavaScript", icon: IconJavaScript },
+      { name: "Next.js", icon: IconNextJs },
+      { name: "React", icon: IconReact },
+      { name: "Tailwind", icon: IconTaiwind },
+      { name: "TypeScript", icon: IconTypeScript },
+    ],
+  },
+];
+---
+
+<section>
+  <h2 class="flex items-center mb-10">
+    <IconStack />
+    Stack
+  </h2>
+  <div class="flex justify-around">
+    {
+      techStack.map(({ category, items }) => (
+        <IndividualStack category={category} items={items} />
+      ))
+    }
+  </div>
+</section>

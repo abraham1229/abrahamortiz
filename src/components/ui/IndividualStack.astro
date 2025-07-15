@@ -1,0 +1,28 @@
+---
+interface Item {
+  name: string;
+  icon: any; // cada ícono es un componente
+}
+
+interface Props {
+  category: string;
+  items: Item[];
+}
+
+const { category, items } = Astro.props;
+---
+
+<section class="mb-10">
+  <h3 class="text-white text-xl font-bold mb-4 text-center">{category}</h3>
+  <div class="grid grid-cols-3 gap-5">
+    {items.map(item => {
+      const Icon = item.icon;
+      return (
+        <div class="flex flex-col items-center gap-2 text-sm text-white">
+          <Icon class="w-20 h-20" />
+          <span>{item.name}</span>
+        </div>
+      );
+    })}
+  </div>
+</section>
