@@ -1,0 +1,81 @@
+---
+import IconCode from "./icons/IconCode.astro";
+
+const projects = [
+  {
+    title: "Alpinum Acounting AG | Webpage",
+    description:
+      "Website for Alpinum Accounting AG, a consulting company in accounting and finance.",
+    tags: ["Wordpress"],
+    image: "/images/prueba.png", // pon aquí la ruta de tu imagen
+    link: "https://alpinum.example.com",
+  },
+  {
+    title: "Population and Transfer | PPL Ecosystem",
+    description:
+      "Design and development of a microservice for the Ecosystem of Persons Deprived of Liberty.",
+    tags: ["Bootstrap", "JavaScript", "Laravel"],
+    image: "/images/prueba.png", // pon aquí la ruta de tu imagen
+    link: "",
+  },
+];
+---
+
+<section class="my-16">
+  <h2
+    class="text-white font-bold text-3xl md:text-4xl flex items-center gap-2 mb-10"
+  >
+    <IconCode /> Projects
+  </h2>
+
+  <div class="flex flex-col gap-12">
+    {
+      projects.map((project) => (
+        <div class="flex flex-col md:flex-row items-center gap-6 p-6 rounded-xl">
+          <div class="md:w-1/2">
+            <img
+              src={project.image}
+              alt={project.title}
+              class="rounded-2xl shadow-md"
+            />
+          </div>
+
+          <div class="md:w-1/2 text-white">
+            <h3 class="text-xl md:text-2xl font-semibold mb-2">
+              {project.title}
+            </h3>
+            <p class="text-sm md:text-base text-gray-300 mb-4">
+              {project.description}
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.tags.map((tag) => (
+                <span
+                  class="text-xs px-2 py-1 rounded-full font-medium text-white"
+                  class:list={[
+                    tag === "Wordpress" && "bg-[#21759b]",
+                    tag === "Bootstrap" && "bg-[#563d7c]",
+                    tag === "JavaScript" && "bg-[#f7df1e] text-black",
+                    tag === "Laravel" && "bg-[#ff2d20]",
+                  ]}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                class="inline-block px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium rounded transition"
+              >
+                Preview
+              </a>
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
