@@ -1,0 +1,61 @@
+---
+import IconWebsite from '../icons/IconWebsite.astro';
+
+export interface Props {
+  image: string;
+  title: string;
+  tags: string[];
+  description: string;
+  link: string;
+}
+const { image, title, tags, description, link} = Astro.props;
+---
+
+<div class="flex flex-col md:flex-row items-center gap-6 p-6 rounded-xl">
+  <div class="md:w-1/2">
+    <img
+      src={image}
+      alt={title}
+      class="rounded-2xl shadow-md w-90 h-auto"
+    />
+  </div>
+
+  <div class="md:w-1/2 text-white">
+    <h3 class="text-xl md:text-2xl font-semibold mb-2">
+      {title}
+    </h3>
+    <div class="flex flex-wrap gap-2 mb-4">
+      {
+        tags.map((tag) => (
+          <span
+            class="text-xs px-2 py-1 rounded-full font-medium text-white"
+            class:list={[
+              tag === "Wordpress" && "bg-[#21759b]",
+              tag === "Bootstrap" && "bg-[#563d7c]",
+              tag === "JavaScript" && "bg-[#f7df1e] text-black",
+              tag === "Laravel" && "bg-[#ff2d20]",
+            ]}
+          >
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+    <p class="text-sm md:text-base text-gray-300 mb-4">
+      {description}
+    </p>
+
+    {
+      link && (
+        <a
+          href={link}
+          target="_blank"
+          class="px-4 py-1 bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium transition flex items-center w-fit rounded-full"
+        >
+          <IconWebsite />
+          Preview
+        </a>
+      )
+    }
+  </div>
+</div>
