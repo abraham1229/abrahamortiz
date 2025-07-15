@@ -1,11 +1,12 @@
 @import "tailwindcss";
 @import '@fontsource/poppins';
+@import '@fontsource-variable/onest';
 
 @theme {
   --color-primary: oklch(1 0 0); /* blanco */
   --color-secondary: oklch(0.906 0.009 257.4); /* gris muy claro */
   --color-accent: oklch(0.7495 0.1641 259.12); /*azul*/
-  --font-display: 'Poppins', sans-serif;
+  --font-display: 'Onest Variable', sans-serif;
 }
 
 @layer base {
