@@ -20,7 +20,7 @@ const { category, items } = Astro.props;
       return (
         <div class="flex flex-col items-center gap-2 text-sm text-white">
           <Icon className="w-30 h-20 " />
-          <span>{item.name}</span>
+          <span class="text-xl font-extrabold">{item.name}</span>
         </div>
       );
     })}
