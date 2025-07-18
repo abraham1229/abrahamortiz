@@ -2,6 +2,8 @@
 import LinkWhiteBorder from "./ui/LinkWhiteBorder.astro";
 import LinkColorBorder from "./ui/LinkColorBorder.astro";
 import IconLinkedIn from "./icons/IconLinkedIn.astro"
+import IconGithub from "./icons/Stack/tools/IconGithub.astro";
+import IconEmail from "./icons/IconEmail.astro";
 ---
 
 <section
@@ -13,24 +15,24 @@ import IconLinkedIn from "./icons/IconLinkedIn.astro"
   <div class="my-3">
     <h1 class="text-white text-4xl md:text-5xl mt-5 font-extrabold">Hi, I'm <span class="text-accent">Abraham</span>!</h1>
     <p class="mt-5 text-md md:text-xl text-prueba">
-      Passionate and proactive software engineer with experience in full-stack
-      development, <span class="text-amber-400 font-bold">focused on building scalable and maintainable solutions. </span>
-      Strong background in Node.js, Next.js, and PostgreSQL.
+      Passionate and proactive developer who sees <span class="text-amber-400 font-bold"> beyond the code</span>, always thinking about how it can improve people's lives while writing <span class="text-amber-400 font-bold">scalable, clean, and maintainable</span> solutions.
     </p>
   </div>
   <div class="flex gap-5 md:gap-5 md:justify-center mt-3 flex-wrap">
-    <LinkWhiteBorder href=""> 
+    <LinkWhiteBorder href="https://www.linkedin.com/in/abrahamortizcastro/"> 
     <IconLinkedIn />
     <span class="text-[16px] text-white">LinkedIn</span> 
-  </LinkWhiteBorder>
-    <LinkWhiteBorder href=""> 
-    <IconLinkedIn />
-    <span class="text-[16px] text-white">Github</span> 
-  </LinkWhiteBorder>
-    <LinkWhiteBorder href=""> 
-    <IconLinkedIn />
-    <span class="text-[16px] text-white">Contact me</span> 
-  </LinkWhiteBorder>
+    </LinkWhiteBorder>
+
+    <LinkWhiteBorder href="https://github.com/abraham1229"> 
+      <IconGithub className={"w-4 h-4 md:w-5 md:h-5 text-white mr-1 md:mr-2"} />
+      <span class="text-[16px] text-white">GitHub</span> 
+    </LinkWhiteBorder>
+    
+    <LinkWhiteBorder href="mailto:abrahamortizcastro1229@gmail.com" target="_self"> 
+      <IconEmail />
+      <span class="text-[16px] text-white">Contact me</span> 
+    </LinkWhiteBorder>
   </div>
   <img
     src="/images/ProfilePhoto.jpg"
