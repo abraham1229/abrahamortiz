@@ -78,13 +78,23 @@ const techStack = [
 <section id="stack" class="mt-28 md:mt-40 scroll-mt-24">
   <h2 class="flex items-center mb-10">
     <IconStack />
-    Stack
+    Tech Stack
   </h2>
   <div class="grid md:grid-cols-2 gap-15 md:justify-center mx-4 md:mx-0">
     {
-      techStack.map(({ category, items }) => (
-        <IndividualStack category={category} items={items} />
-      ))
+      techStack.map(({ category, items }, index) => {
+        const isLast = index === techStack.length - 1;
+        const isOdd = techStack.length % 2 === 1;
+
+        const wrapperClass = isLast && isOdd ? "md:col-span-2 md:mx-auto w-full max-w-md" : "";
+
+        return (
+          <div class={wrapperClass}>
+            <IndividualStack category={category} items={items} />
+          </div>
+        );
+      })
     }
   </div>
 </section>
+
