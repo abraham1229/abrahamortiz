@@ -1,48 +1,133 @@
 ---
 import IconCode from "./icons/IconCode.astro";
+import IconFlask from "./icons/IconFlask.astro";
+import IconSettings from "./icons/IconSettings.astro";
 import IconWebsite from "./icons/IconWebsite.astro";
+import IconExpress from "./icons/Stack/backend/IconExpress.astro";
+import IconMongo from "./icons/Stack/backend/IconMongo.astro";
+import IconAstro from "./icons/Stack/frontend/IconAstro.astro";
+import IconReact from "./icons/Stack/frontend/IconReact.astro";
+import IconTaiwind from "./icons/Stack/frontend/IconTaiwind.astro";
+import IconTypeScript from "./icons/Stack/frontend/IconTypeScript.astro";
+import IconGit from "./icons/Stack/tools/IconGit.astro";
+import IconGithub from "./icons/Stack/tools/IconGithub.astro";
 import IndividualProject from "./ui/IndividualProject.astro";
 
 const projects = [
   {
-    title: "Alpinum Acounting AG | Webpage",
+    title: "DevTree",
     description:
-      "Website for Alpinum Accounting AG, a consulting company in accounting and finance.",
+      "Linktree-inspired app where developers can create and manage personalized link profiles with drag-and-drop support.",
     tags: [
       {
-        name: "Website",
-        icon: IconWebsite,
-        color: "bg-blue-600 text-white",
+        name: "MongoDB",
+        icon: IconMongo,
+        color: "bg-[#4DB33D] text-white",
       },
       {
-        name: "Laravel",
-        icon: IconWebsite,
-        color: "bg-[#ff2d20] text-white",
+        name: "Express.js",
+        icon: IconExpress,
+        color: "bg-[#303030] text-white",
       },
-      { name: "JavaScript", color: "bg-[#f7df1e] text-black" },
+      {
+        name: "React",
+        icon: IconReact,
+        color: "bg-[#61DBFB] text-black",
+      },
+      {
+        name: "TailwindCSS",
+        icon: IconTaiwind,
+        color: "bg-[#38BDF8] text-white",
+      },
     ],
-    image: "/images/pruebacover.png", // pon aquí la ruta de tu imagen
-    link: "https://alpinum.example.com",
+    image: "/images/pruebacover.png",
+    links: [
+      {
+        href: "https://abrahamortiz-devtree.netlify.app/",
+        label: "Preview",
+        icon: IconWebsite,
+      },
+      {
+        href: "https://github.com/abraham1229/DevTree",
+        label: "Code",
+        icon: IconGithub,
+      },
+    ],
   },
   {
-    title: "Population and Transfer | PPL Ecosystem",
+    title: "Event Tableware Rental Landing",
     description:
-      "Design and development of a microservice for the Ecosystem of Persons Deprived of Liberty.",
+      "Responsive landing page built for a real client in the event rental industry, showcasing tableware services with gallery, info, and contact form.",
     tags: [
       {
-        name: "Website",
-        icon: IconWebsite,
-        color: "bg-blue-600 text-white",
+        name: "Astro",
+        icon: IconAstro,
+        color: "bg-[#BC52EE] text-white",
       },
       {
-        name: "Laravel",
-        icon: IconWebsite,
-        color: "bg-[#ff2d20] text-white",
+        name: "TailwindCSS",
+        icon: IconTaiwind,
+        color: "bg-[#38BDF8] text-white",
       },
-      { name: "JavaScript", color: "bg-[#f7df1e] text-black" },
+      {
+        name: "React",
+        icon: IconReact,
+        color: "bg-[#61DBFB] text-black",
+      },
+      {
+        name: "TypeScript",
+        icon: IconTypeScript,
+        color: "bg-[#3178C6] text-white",
+      },
     ],
-    image: "/images/prueba.png", // pon aquí la ruta de tu imagen
-    link: "",
+    image: "/images/landingOrca.png",
+    links: [
+      {
+        href: "https://alquiler.salonorca.com/",
+        label: "Preview",
+        icon: IconWebsite,
+      },
+      {
+        href: "https://github.com/SebasOrtiz04/astro-landings/tree/loza-production",
+        label: "Code",
+        icon: IconGithub,
+      },
+    ],
+  },
+  {
+    title: "Payment System API",
+    description:
+      "RESTful API built for a fintech challenge in 48 hours, featuring secure user registration, dual-layer JWT authentication, a multi-step transaction flow, unit and integration testing, and CI/CD deployment.",
+    tags: [
+      {
+        name: "Express.js",
+        icon: IconExpress, // usa el mismo ícono de Express que ya tengas
+        color: "bg-[#303030] text-white",
+      },
+      {
+        name: "MongoDB",
+        icon: IconMongo, // igual al que ya estás usando
+        color: "bg-green-600 text-white",
+      },
+      {
+        name: "CI/CD",
+        icon: IconSettings,
+        color: "bg-indigo-600 text-white",
+      },
+      {
+        name: "Testing",
+        icon: IconFlask, // o el que uses
+        color: "bg-yellow-500 text-black",
+      },
+    ],
+    image: "/images/apiPayment.png",
+    links: [
+      {
+        href: "https://github.com/abraham1229/ejercicioGuaostudio",
+        label: "Code",
+        icon: IconGithub,
+      },
+    ],
   },
 ];
 ---
@@ -62,7 +147,7 @@ const projects = [
           title={project.title}
           tags={project.tags}
           description={project.description}
-          link={project.link}
+          links={project.links}
         />
       ))
     }
