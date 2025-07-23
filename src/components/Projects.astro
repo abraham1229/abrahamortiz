@@ -5,15 +5,61 @@ import IconSettings from "./icons/IconSettings.astro";
 import IconWebsite from "./icons/IconWebsite.astro";
 import IconExpress from "./icons/Stack/backend/IconExpress.astro";
 import IconMongo from "./icons/Stack/backend/IconMongo.astro";
+import IconPg from "./icons/Stack/backend/IconPg.astro";
 import IconAstro from "./icons/Stack/frontend/IconAstro.astro";
+import IconNextJs from "./icons/Stack/frontend/IconNextJs.astro";
 import IconReact from "./icons/Stack/frontend/IconReact.astro";
 import IconTaiwind from "./icons/Stack/frontend/IconTaiwind.astro";
 import IconTypeScript from "./icons/Stack/frontend/IconTypeScript.astro";
-import IconGit from "./icons/Stack/tools/IconGit.astro";
 import IconGithub from "./icons/Stack/tools/IconGithub.astro";
 import IndividualProject from "./ui/IndividualProject.astro";
 
 const projects = [
+  {
+    title: "CashTrackr",
+    description:
+      "Finance app to manage budgets and expenses, with account confirmation via email, secure CRUD operations, and full testing. Backend built with MVC architecture and frontend with hybrid rendering for performance and SEO.",
+    tags: [
+      {
+        name: "Express.js",
+        icon: IconExpress,
+        color: "bg-[#303030] text-white", 
+      },
+      {
+        name: "PostgreSQL",
+        icon: IconPg, 
+        color: "bg-[#336791] text-white", 
+      },
+      {
+        name: "Next.js",
+        icon: IconNextJs, 
+        color: "bg-black text-white", 
+      },
+      {
+        name: "TypeScript",
+        icon: IconTypeScript, 
+        color: "bg-blue-600 text-white", 
+      },
+    ],
+    image: "/images/CashTrackr.png",
+    links: [
+      {
+        href: "https://cashtrackr-page.vercel.app/",
+        label: "Preview",
+        icon: IconWebsite,
+      },
+      {
+        href: "https://github.com/abraham1229/cashtrackr-api",
+        label: "Backend",
+        icon: IconGithub,
+      },
+      {
+        href: "https://github.com/abraham1229/cashtrackr-page",
+        label: "Frontend",
+        icon: IconGithub,
+      },
+    ],
+  },
   {
     title: "DevTree",
     description:
@@ -106,7 +152,7 @@ const projects = [
       },
       {
         name: "MongoDB",
-        icon: IconMongo, 
+        icon: IconMongo,
         color: "bg-green-600 text-white",
       },
       {
