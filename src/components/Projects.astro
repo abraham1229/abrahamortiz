@@ -13,8 +13,54 @@ import IconTaiwind from "./icons/Stack/frontend/IconTaiwind.astro";
 import IconTypeScript from "./icons/Stack/frontend/IconTypeScript.astro";
 import IconGithub from "./icons/Stack/tools/IconGithub.astro";
 import IndividualProject from "./ui/IndividualProject.astro";
+import IconNestjs from "./icons/Stack/backend/IconNestjs.astro";
 
 const projects = [
+{
+    title: "POS",
+    description:
+      "Complete Point of Sale system with customer store interface and admin dashboard for real-time inventory management and sales tracking.",
+    tags: [
+      {
+        name: "Nest.js",
+        icon: IconNestjs,
+        color: "bg-[#E0234E] text-white", 
+      },
+      {
+        name: "PostgreSQL",
+        icon: IconPg, 
+        color: "bg-[#336791] text-white", 
+      },
+      {
+        name: "Next.js",
+        icon: IconNextJs, 
+        color: "bg-black text-white", 
+      },
+      {
+        name: "TypeScript",
+        icon: IconTypeScript, 
+        color: "bg-blue-600 text-white", 
+      },
+    ],
+    image: "/images/POS.png",
+    links: [
+      {
+        href: "https://pos-page-nine.vercel.app/",
+        label: "Preview",
+        icon: IconWebsite,
+      },
+      {
+        href: "https://github.com/abraham1229/pos-api",
+        label: "Backend",
+        icon: IconGithub,
+      },
+      {
+        href: "https://github.com/abraham1229/pos-page",
+        label: "Frontend",
+        icon: IconGithub,
+      },
+    ],
+  },
   {
     title: "CashTrackr",
     description:
